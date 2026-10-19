@@ -1,0 +1,17 @@
+{
+  "name": "Neuro Systems · Neurociência & Memória Celular",
+  "short_name": "Neuro",
+  "description": "Neurociência Cognitiva, Neuroplasticidade, Reprogramação Biográfica e Memória Celular · Safe Creative #2610157331452",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08091A",
+  "theme_color": "#6366F1",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

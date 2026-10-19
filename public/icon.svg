@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <radialGradient id="neuroGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#818CF8"/>
+      <stop offset="60%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#08091A"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="#08091A"/>
+  <circle cx="256" cy="256" r="190" fill="none" stroke="url(#neuroGlow)" stroke-width="10" stroke-dasharray="10 8"/>
+  <circle cx="256" cy="256" r="120" fill="#0E102E" stroke="#6366F1" stroke-width="8"/>
+  <path d="M200 256 Q 230 180 256 220 T 312 256 T 256 310 Z" fill="#818CF8" opacity="0.85"/>
+  <circle cx="200" cy="256" r="14" fill="#C084FC"/>
+  <circle cx="312" cy="256" r="14" fill="#C084FC"/>
+  <circle cx="256" cy="220" r="14" fill="#A78BFA"/>
+  <circle cx="256" cy="310" r="14" fill="#A78BFA"/>
+  <line x1="200" y1="256" x2="256" y2="220" stroke="#E0E7FF" stroke-width="4"/>
+  <line x1="256" y1="220" x2="312" y2="256" stroke="#E0E7FF" stroke-width="4"/>
+  <line x1="312" y1="256" x2="256" y2="310" stroke="#E0E7FF" stroke-width="4"/>
+  <line x1="256" y1="310" x2="200" y2="256" stroke="#E0E7FF" stroke-width="4"/>
+</svg>

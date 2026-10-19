@@ -1,0 +1,1192 @@
+{
+  "system": "Memory Systems™",
+  "version": "2.0.0",
+  "ecosystem": "Inteligência Integrativa™",
+  "changelog": "v2.0 — Expansão de profundidade por módulo: níveis de progressão, fluxo de sessão, referências científicas, notas terapêuticas, integração entre módulos, contraindições e trilhas de utilizador.",
+  "modules_index": ["M1_NeuroMap", "M2_FlowTracker", "M3_ReconstructionEngine", "M4_FrequencySupport"],
+
+  "system_knowledge_base": {
+    "core_principles": [
+      "Memória é reconstrução contextual — nunca reprodução literal (Bartlett, 1932)",
+      "Plasticidade depende de estado fisiológico — consolidação requer janela de receptividade",
+      "Emoção e memória são inseparáveis — amígdala modula a força do traço mnémico (McGaugh, 2000)",
+      "Narrativa é o mecanismo de integração — coerência narrativa prediz bem-estar psicológico (McAdams, 2001)",
+      "Espaçamento supera intensidade — revisão distribuída é superior à massiva (Cepeda et al., 2006)"
+    ],
+    "scientific_refinements_v2": [
+      "LTP (Long-Term Potentiation) ocorre em minutos mas a consolidação sistémica demora dias a semanas",
+      "O sono REM é crítico para consolidação emocional; NREM para consolidação declarativa (Walker, 2017)",
+      "A reconsolidação abre janela de modificação de memórias já consolidadas — base do EX3.1 (Nader, 2000)",
+      "HRV é proxy de regulação autonômica, não indicador direto de memória — correlação mediada por estado",
+      "Biofotões: hipótese emergente — manter em camada simbólica, aguardar validação"
+    ],
+    "user_journey": {
+      "week_1_2": "Estabelecimento de baseline + criação de hábito de registo (M1 + M2)",
+      "week_3_4": "Ativação do motor de reconstrução + primeiros exercícios de evocação (M3)",
+      "week_5_6": "Integração profunda + reforço neuroplástico + ancoragem sonora (M3 + M4)",
+      "week_7_8": "Consolidação de padrões + avaliação de evolução + plano de manutenção"
+    },
+    "progression_levels": {
+      "iniciante": "Semanas 1–2 — foco em registo e observação sem exigência de mudança",
+      "intermedio": "Semanas 3–5 — exercícios ativos de reconstrução e associação",
+      "avancado": "Semanas 6–8 — integração profunda, espaçamento e autonomia crescente"
+    }
+  },
+
+  "modules": {
+
+    "M1_NeuroMap": {
+      "id": "M1",
+      "name": "NeuroMap",
+      "icon": "🧠",
+      "tagline": "Mapeamento cognitivo e rastreamento de padrões",
+      "version": "2.0",
+      "description": "Módulo de avaliação e linha de base cognitiva. Mapeia o perfil de memória do utilizador em três dimensões — episódica, de trabalho e emocional — e rastreia evolução longitudinal. Funciona como o 'scanner de entrada' do sistema.",
+      "session_frequency": "1x semanal (avaliação formal) + registo diário de 3 min",
+      "session_duration_min": 15,
+      "level_progression": {
+        "iniciante": "Avaliação básica + diário simples de memórias do dia",
+        "intermedio": "Testes cognitivos completos + mapa de padrões temáticos",
+        "avancado": "Análise longitudinal + identificação de lacunas específicas + integração com M3"
+      },
+
+      "session_flow": [
+        { "step": 1, "name": "Preparação", "duration_min": 2, "description": "3 respirações profundas. Registar estado emocional inicial (0–10). Intenção da sessão." },
+        { "step": 2, "name": "Avaliação Cognitiva", "duration_min": 7, "description": "Executar teste selecionado conforme nível (Span de Dígitos / Evocação / Mapa de Padrões)." },
+        { "step": 3, "name": "Registo de Padrões", "duration_min": 4, "description": "Anotar memória espontânea do dia + classificar nitidez e carga emocional." },
+        { "step": 4, "name": "Encerramento", "duration_min": 2, "description": "Comparar estado inicial e final. Registar insight principal da sessão." }
+      ],
+
+      "scientific_references": [
+        { "citation": "Wechsler, D. (2008). WAIS-IV Administration and Scoring Manual.", "relevance": "Base do Digit Span — padrão de ouro para memória de trabalho fonológica" },
+        { "citation": "Tulving, E. (2002). Episodic memory: From mind to brain. Annual Review of Psychology.", "relevance": "Fundamentação da memória episódica e sua distinção da semântica" },
+        { "citation": "Squire, L.R. (2004). Memory systems of the brain. Neurobiology of Learning and Memory.", "relevance": "Taxonomia dos sistemas de memória — base da arquitetura do M1" }
+      ],
+
+      "data_structure": {
+        "inputs": [
+          {
+            "id": "I1.1",
+            "name": "Avaliação Cognitiva Básica",
+            "type": "teste_estruturado",
+            "fields": ["data_avaliacao", "score_memoria_trabalho_0_100", "score_memoria_episodica_0_100", "score_atencao_sustentada_0_100", "tempo_resposta_medio_ms", "nivel_fadiga_pre_0_10"]
+          },
+          {
+            "id": "I1.2",
+            "name": "Diário de Padrões Mnémicos",
+            "type": "registo_estruturado",
+            "fields": ["data", "descricao_evento_memoravel", "clareza_0_10", "carga_emocional_0_10", "categoria_tematica", "frequencia_recordacao_semana", "surgiu_espontaneamente_sim_nao"]
+          },
+          {
+            "id": "I1.3",
+            "name": "Autoavaliação Subjetiva — PRMQ Simplificado",
+            "type": "escala_validada",
+            "fields": ["percepcao_clareza_mental_0_10", "facilidade_recordacao_0_10", "confianca_na_memoria_0_10", "falhas_cotidianas_frequencia", "percepcao_evolucao_vs_semana_passada"]
+          },
+          {
+            "id": "I1.4",
+            "name": "Contexto Fisiológico",
+            "type": "registo_rapido",
+            "fields": ["horas_sono_ultima_noite", "nivel_hidratacao_0_10", "exercicio_fisico_hoje_sim_nao", "ultimo_repasto_horas", "stress_geral_dia_0_10"]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "O1.1",
+            "name": "Perfil NeuroMap",
+            "type": "dashboard",
+            "fields": ["indice_consolidacao_IC", "grafico_radar_3_dimensoes", "evolucao_temporal_8_semanas", "areas_de_forca", "areas_de_atencao", "correlacao_sono_performance"]
+          },
+          {
+            "id": "O1.2",
+            "name": "Relatório de Linha de Base",
+            "type": "pdf_exportavel",
+            "fields": ["data_baseline", "scores_cognitivos_iniciais", "padroes_tematicos_dominantes", "recomendacao_modulos_prioritarios", "metas_individualizadas_8_semanas"]
+          },
+          {
+            "id": "O1.3",
+            "name": "Alerta de Lacuna Cognitiva",
+            "type": "notificacao_inteligente",
+            "trigger": "score < 40 em qualquer dimensão por 2 sessões consecutivas",
+            "message": "Identificada área de atenção — recomendamos sessão dedicada de M3 ou consulta com terapeuta"
+          }
+        ]
+      },
+
+      "exercises_and_protocols": [
+        {
+          "id": "EX1.1",
+          "name": "Span de Dígitos — Avaliação de Memória de Trabalho",
+          "level": "iniciante",
+          "type": "teste_cognitivo_validado",
+          "duration_min": 5,
+          "scientific_basis": "WAIS-IV Digit Span — memória de trabalho fonológica e manipulação mental",
+          "scientific_reference": "Wechsler (2008); Baddeley (2000) — Modelo de Memória de Trabalho Multicomponente",
+          "instructions": [
+            "FASE DIRETA: Ouvir sequência crescente de dígitos (ex: 3-7-1 → 3-7-1-9 → ...)",
+            "Repetir imediatamente na mesma ordem",
+            "Continuar até errar 2 tentativas no mesmo nível",
+            "Registar extensão máxima correta",
+            "FASE INVERSA: Repetir a sequência na ordem contrária",
+            "FASE ORDENADA (avançado): Ordenar os dígitos do menor para o maior",
+            "Score composto: (direta + inversa + ordenada) / 3"
+          ],
+          "scoring": {
+            "forward_span_normal": "5–9 dígitos",
+            "backward_span_normal": "4–7 dígitos",
+            "alert_below": "forward < 4 ou backward < 3",
+            "composite_formula": "(forward_max + backward_max) / 2 × 10"
+          },
+          "therapist_notes": "Score baixo isolado não indica patologia. Correlacionar com sono, stress e fadiga do dia. Se persistir < 4 por 3 semanas, recomendar avaliação neuropsicológica.",
+          "frequency": "semanal",
+          "progression": {
+            "iniciante": "apenas fase direta",
+            "intermedio": "direta + inversa",
+            "avancado": "direta + inversa + ordenada"
+          }
+        },
+        {
+          "id": "EX1.2",
+          "name": "Evocação Episódica Contextualizada",
+          "level": "iniciante",
+          "type": "exercicio_de_recordacao_ativa",
+          "duration_min": 10,
+          "scientific_basis": "Memória episódica hipocampal — especificidade de What-Where-When (Tulving, 2002)",
+          "scientific_reference": "Tulving (2002); Maguire et al. (2000) — Hipocampo e memória espacial-temporal",
+          "instructions": [
+            "Selecionar um evento das últimas 48 horas (não urgente, não traumático)",
+            "Eixo WHAT: O que aconteceu exactamente? Descrever em 5 frases",
+            "Eixo WHERE: Onde estava? Reconstruir mentalmente o espaço — cores, cheiros, sons",
+            "Eixo WHEN: A que horas? O que aconteceu antes e depois?",
+            "Eixo WHO: Quem estava? O que disseram? O que expressaram?",
+            "Eixo HOW FELT: O que sentiu no corpo? Onde sentiu?",
+            "Classificar nitidez (0–10) e riqueza sensorial (0–10)",
+            "Identificar: que detalhe foi mais vívido? Que detalhe está vago?"
+          ],
+          "scoring": {
+            "nitidez_0_10": "score subjetivo de clareza",
+            "riqueza_sensorial_0_10": "número de sentidos evocados",
+            "eixos_completos": "número de eixos completados (0–5)",
+            "score_episodico": "(nitidez + riqueza + eixos_completos × 2) / 4"
+          },
+          "therapist_notes": "Observar quais eixos o utilizador sistematicamente omite — podem indicar bloqueios emocionais específicos (ex: omissão consistente de WHO pode indicar evitação relacional).",
+          "frequency": "diária ou 3x/semana",
+          "progression": {
+            "iniciante": "3 eixos (WHAT, WHERE, HOW FELT)",
+            "intermedio": "5 eixos completos",
+            "avancado": "5 eixos + comparação com recordação de há 24h"
+          }
+        },
+        {
+          "id": "EX1.3",
+          "name": "Mapa Temático de Padrões Mnémicos",
+          "level": "intermedio",
+          "type": "analise_longitudinal",
+          "duration_min": 12,
+          "scientific_basis": "Reconhecimento de padrões implícitos — estriado (memória procedural) e amígdala (consolidação emocional)",
+          "scientific_reference": "Packard & Knowlton (2002); McGaugh (2000) — Modulação amigdalar da consolidação",
+          "instructions": [
+            "Rever as memórias registadas nos últimos 7 dias",
+            "Organizar por tema: Relações / Trabalho-Propósito / Corpo-Saúde / Passado / Futuro / Identidade",
+            "Identificar o tema mais frequente (quantidade de memórias)",
+            "Identificar o tema com maior carga emocional média",
+            "Nomear o padrão dominante: 'Nas últimas semanas, a minha mente regressa frequentemente a ___'",
+            "Classificar: este padrão é adaptativo (aprendizagem) ou reativo (evitação/ruminação)?",
+            "Escala de utilidade: −5 (limita muito) a +5 (serve muito)"
+          ],
+          "scoring": {
+            "tema_dominante": "categoria identificada",
+            "carga_emocional_media": "média das classificações do tema",
+            "utilidade_padrao": "−5 a +5",
+            "tendencia": "ascendente / estável / descendente",
+            "acao_recomendada": "integrar (se +) / trabalhar em M3 (se −)"
+          },
+          "therapist_notes": "Padrões com utilidade < −2 e alta frequência (> 5x/semana) devem ser encaminhados para trabalho activo em M3 — Reconstruction Engine. Padrões ligados a trauma severo → suporte profissional.",
+          "frequency": "semanal",
+          "progression": {
+            "iniciante": "identificar tema dominante apenas",
+            "intermedio": "mapa temático completo",
+            "avancado": "análise de evolução mensal dos padrões + correlação com estado fisiológico"
+          }
+        },
+        {
+          "id": "EX1.4",
+          "name": "Teste de Aprendizagem Verbal — RAVLT Simplificado",
+          "level": "intermedio",
+          "type": "teste_cognitivo_validado",
+          "duration_min": 10,
+          "scientific_basis": "Rey Auditory Verbal Learning Test — aprendizagem serial e memória verbal episódica",
+          "scientific_reference": "Rey (1958); Schmidt (1996) — RAVLT normativo",
+          "instructions": [
+            "LISTA A: Ler 15 palavras em voz alta (ou áudio) a ritmo de 1/segundo",
+            "Tentativa 1: Utilizador escreve todas as que recorda (ordem livre)",
+            "Repetir lista A → Tentativa 2, 3, 4, 5 (sem feedback entre tentativas)",
+            "LISTA B (interferência): Ler 15 novas palavras — utilizador recorda imediatamente",
+            "Após lista B: Recordar lista A novamente (recordação imediata pós-interferência)",
+            "Aguardar 20 minutos → Recordar lista A (recordação tardia)",
+            "Reconhecimento: apresentar 50 palavras, identificar as 15 da lista A"
+          ],
+          "scoring": {
+            "curva_aprendizagem": "score T1 a T5 (deve aumentar progressivamente)",
+            "score_total_T1_T5": "soma das 5 tentativas (normal: 45–65)",
+            "interferencia_retrograda": "T5 - recordacao_apos_lista_B",
+            "retencao_percentual": "(recordacao_tardia / T5) × 100",
+            "alert": "retencao < 75% pode indicar dificuldade de consolidação"
+          },
+          "therapist_notes": "Este teste é o mais sensível para detectar problemas de consolidação hipocampal. Não usar como diagnóstico — usar como indicador de progressão interna ao sistema. Curva ascendente consistente = neuroplasticidade activa.",
+          "frequency": "quinzenal",
+          "progression": {
+            "iniciante": "não aplicar ainda",
+            "intermedio": "versão simplificada 10 palavras",
+            "avancado": "protocolo completo 15 palavras com interferência"
+          }
+        },
+        {
+          "id": "EX1.5",
+          "name": "Inventário de Contextos de Melhor Memória",
+          "level": "avancado",
+          "type": "auto_observacao_contextual",
+          "duration_min": 8,
+          "scientific_basis": "Efeito de contexto na recuperação — Godden & Baddeley (1975); Encoding Specificity — Tulving",
+          "scientific_reference": "Godden & Baddeley (1975); Tulving & Thomson (1973)",
+          "instructions": [
+            "Identificar as últimas 5 memórias mais vívidas e nítidas",
+            "Para cada uma, registar: hora do dia / estado emocional / ambiente / atividade prévia",
+            "Identificar padrão: em que condições a memória funciona melhor?",
+            "Criar perfil pessoal de 'janela de consolidação óptima'",
+            "Exemplos comuns: após exercício físico / manhã em silêncio / após conversa significativa",
+            "Planear as sessões de M3 nas janelas de maior receptividade identificadas"
+          ],
+          "scoring": {
+            "condicoes_identificadas": "lista de 3–5 condições",
+            "janela_optima_horario": "período do dia",
+            "janela_optima_estado": "estado emocional/fisiológico",
+            "plano_sessoes_M3": "agendamento optimizado"
+          },
+          "therapist_notes": "Este exercício aumenta significativamente a eficácia de M3 quando o timing é respeitado. Utilizadores que agendam sessões de reconstrução nas suas janelas óptimas mostram 30–40% mais retenção.",
+          "frequency": "mensal",
+          "progression": {
+            "avancado": "apenas após 4 semanas de dados registados"
+          }
+        }
+      ],
+
+      "kpis": [
+        {
+          "id": "KPI_M1_1",
+          "name": "Score NeuroMap Composto",
+          "formula": "(score_memoria_trabalho + score_memoria_episodica + score_atencao) / 3",
+          "scale": "0–100",
+          "target_4w": "> 60",
+          "target_8w": "> 72",
+          "alert_threshold": "< 35 por 2 sessões consecutivas → notificar terapeuta"
+        },
+        {
+          "id": "KPI_M1_2",
+          "name": "Índice de Nitidez Episódica (INE)",
+          "formula": "(nitidez_media + riqueza_sensorial_media + eixos_completos_media) / 3 × 10",
+          "scale": "0–100",
+          "target_4w": "> 55",
+          "target_8w": "> 70",
+          "alert_threshold": "< 30"
+        },
+        {
+          "id": "KPI_M1_3",
+          "name": "Taxa de Padrões Adaptativos (TPA)",
+          "formula": "padroes_com_utilidade_positiva / total_padroes_identificados",
+          "scale": "0–1",
+          "target_8w": "> 0.65 (maioria dos padrões tornam-se adaptativos)",
+          "alert_threshold": "< 0.3 (maioria reativa — intensificar M3)"
+        },
+        {
+          "id": "KPI_M1_4",
+          "name": "Curva de Aprendizagem Verbal",
+          "formula": "slope da regressão linear T1→T5 (RAVLT simplificado)",
+          "scale": "palavras por tentativa",
+          "target": "slope positivo > 1.5 (melhoria de pelo menos 1.5 palavras por tentativa)",
+          "alert_threshold": "slope negativo ou flat → dificuldade de encoding"
+        },
+        {
+          "id": "KPI_M1_5",
+          "name": "Correlação Sono-Performance",
+          "formula": "correlação Pearson entre horas_sono e score_neuromap_composto",
+          "scale": "−1 a +1",
+          "target": "correlação > 0.4 (confirma efeito do sono)",
+          "note": "Educativo — mostra ao utilizador o impacto direto do sono na sua memória"
+        }
+      ],
+
+      "contraindications": [
+        "Não aplicar testes cognitivos em estado de fadiga extrema (score fadiga > 8) — resultados inválidos",
+        "Não interpretar scores baixos isolados como défice — sempre correlacionar com contexto",
+        "Não usar RAVLT em utilizadores com baixa escolaridade sem normalização adequada",
+        "Memórias com carga emocional > 8 não devem ser usadas em EX1.2 — encaminhar para M3 com suporte"
+      ],
+
+      "integration_with_other_modules": {
+        "M2_FlowTracker": "Score de estado M2 deve preceder avaliação M1 — estado fisiológico influencia diretamente o resultado",
+        "M3_ReconstructionEngine": "Padrões com utilidade < −2 identificados em EX1.3 → encaminhar directamente para EX3.1 ou EX3.4",
+        "M4_FrequencySupport": "Ativar protocolo Alpha (EX4.2) 5 min antes das avaliações formais de M1"
+      }
+    },
+
+    "M2_FlowTracker": {
+      "id": "M2",
+      "name": "Flow Tracker",
+      "icon": "🌊",
+      "tagline": "Monitoramento de estado e identificação de janelas de consolidação",
+      "version": "2.0",
+      "description": "Módulo de monitoramento contínuo do estado interno — emocional, respiratório e cardíaco. Função dupla: regular o estado para maximizar plasticidade E identificar as janelas temporais em que o utilizador está mais receptivo para trabalho de memória.",
+      "session_frequency": "diária — check-in de 5–8 min (manhã e/ou antes de M3)",
+      "session_duration_min": 8,
+
+      "session_flow": [
+        { "step": 1, "name": "Check-in de Estado", "duration_min": 2, "description": "Registar: stress (0–10), clareza (0–10), tensão corporal (0–10). Identificar emoção dominante." },
+        { "step": 2, "name": "Scan Corporal Rápido", "duration_min": 2, "description": "30 segundos de observação da respiração. Identificar localização primária de tensão." },
+        { "step": 3, "name": "Exercício de Regulação", "duration_min": 5, "description": "Respiração 5-5 ou protocolo selecionado pelo sistema conforme estado de entrada." },
+        { "step": 4, "name": "Avaliação de Janela", "duration_min": 1, "description": "Calcular score de plasticidade (soma de 3 dimensões). Decidir: avançar para M3 ou aguardar." }
+      ],
+
+      "scientific_references": [
+        { "citation": "Lehrer, P.M. & Gevirtz, R. (2014). Heart rate variability biofeedback. Frontiers in Psychology.", "relevance": "Base científica do Coherence Engine — HRV como proxy de regulação autonômica" },
+        { "citation": "Walker, M. (2017). Why We Sleep. Scribner.", "relevance": "Sono e consolidação — justifica correlação sono-plasticidade no sistema" },
+        { "citation": "Craig, A.D. (2009). How do you feel now? Nature Reviews Neuroscience.", "relevance": "Interocepção e consciência corporal — base do Scan Corporal" }
+      ],
+
+      "data_structure": {
+        "inputs": [
+          {
+            "id": "I2.1",
+            "name": "Check-in de Estado Interno",
+            "type": "escala_estruturada",
+            "fields": ["data_hora", "stress_0_10", "clareza_mental_0_10", "energia_0_10", "tensao_corporal_0_10", "emocao_dominante", "localizacao_tensao_no_corpo"]
+          },
+          {
+            "id": "I2.2",
+            "name": "Padrão Respiratório Observado",
+            "type": "auto_observacao",
+            "fields": ["ritmo_subjetivo", "profundidade_0_10", "tensao_toracica_0_10", "tipo_predominante"]
+          },
+          {
+            "id": "I2.3",
+            "name": "HRV Input (wearable)",
+            "type": "dado_fisiologico",
+            "optional": true,
+            "fields": ["RMSSD_ms", "SDNN_ms", "coherence_score_0_100", "dispositivo", "medicao_duracao_min"]
+          },
+          {
+            "id": "I2.4",
+            "name": "Contexto Circadiano",
+            "type": "registo_temporal",
+            "fields": ["periodo_do_dia", "horas_desde_despertar", "ultima_refeicao_horas", "exposicao_luz_natural_min", "atividade_fisica_hoje_sim_nao"]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "O2.1",
+            "name": "Score de Janela de Plasticidade",
+            "type": "indicador_em_tempo_real",
+            "formula": "clareza_mental + abertura_emocional + energia_disponivel",
+            "scale": "0–30",
+            "interpretation": {
+              "0_14": "Repouso — não iniciar M3. Aplicar EX2.1 e aguardar.",
+              "15_20": "Janela parcial — M3 leve possível (EX3.4 escrita apenas)",
+              "21_30": "Janela óptima — iniciar M3 com plena confiança"
+            }
+          },
+          {
+            "id": "O2.2",
+            "name": "Dashboard de Ritmos Semanais",
+            "type": "grafico_temporal",
+            "fields": ["linha_estado_7_dias", "horarios_pico_de_plasticidade", "correlacao_emocao_clareza", "padrao_circadiano_pessoal"]
+          },
+          {
+            "id": "O2.3",
+            "name": "Recomendação Adaptativa",
+            "type": "decisao_do_sistema",
+            "logic": {
+              "janela_optima": "→ Iniciar M3 agora",
+              "janela_parcial": "→ EX3.4 apenas (escrita leve)",
+              "repouso": "→ EX2.1 Scan + EX2.2 Respiração. Reavalie em 20 min.",
+              "stress_acima_8": "→ EX2.2 urgente. Não prosseguir para M3 hoje."
+            }
+          }
+        ]
+      },
+
+      "exercises_and_protocols": [
+        {
+          "id": "EX2.1",
+          "name": "Scan Corporal de 3 Minutos",
+          "level": "iniciante",
+          "type": "protocolo_somatico",
+          "duration_min": 3,
+          "scientific_basis": "Interocepção — consciência das sensações viscerais e somáticas (Craig, 2009)",
+          "scientific_reference": "Farb et al. (2013) — Interocepção e regulação emocional; insula anterior",
+          "instructions": [
+            "Fechar os olhos. 3 respirações naturais.",
+            "Começar pela coroa da cabeça — há tensão? Formigueiro? Calor?",
+            "Descer lentamente: testa → olhos → maxilar → pescoço",
+            "Ombros → braços → mãos — são as zonas de maior tensão crónica",
+            "Peito → coração → estômago — que sensação há aqui?",
+            "Quadril → pernas → pés — sentir o contacto com o chão",
+            "Classificar tensão global (0–10) e registar zona primária",
+            "Expirar profundamente liberando a zona mais tensa"
+          ],
+          "scoring": {
+            "tensao_global_0_10": "auto-classificação",
+            "zona_primaria": "região anatómica",
+            "variacao_vs_ontem": "delta calculado pelo sistema",
+            "padrao_semanal": "zonas mais frequentemente tensas"
+          },
+          "therapist_notes": "Tensão crónica no maxilar → stress de supressão emocional. Tensão no estômago → ansiedade antecipatória. Ombros → sobrecarga de responsabilidade. Usar estes padrões para guiar o trabalho de M3.",
+          "frequency": "diária — manhã",
+          "progression": {
+            "iniciante": "scan de 1 min, 3 zonas apenas",
+            "intermedio": "scan completo 3 min",
+            "avancado": "scan completo + registo de variação circadiana"
+          }
+        },
+        {
+          "id": "EX2.2",
+          "name": "Respiração de Coerência 5-5",
+          "level": "iniciante",
+          "type": "protocolo_respiratorio",
+          "duration_min": 5,
+          "scientific_basis": "Biofeedback de HRV — ressonância baroreflexa a 0.1 Hz (Lehrer & Gevirtz, 2014)",
+          "scientific_reference": "Lehrer & Gevirtz (2014); McCraty et al. (2009) — Coerência cardíaca e regulação autonômica",
+          "mechanism": "Respiração a 6 ciclos/min (~5s inspiração + 5s expiração) maximiza oscilações de HRV na frequência de baixa frequência, activando o reflexo barorreceptor e tonificando o nervo vago.",
+          "instructions": [
+            "Sentar com coluna ereta, pés planos no chão",
+            "Mão suave sobre o coração (activa atenção cardíaca — HeartMath principle)",
+            "INSPIRAR pelo nariz: 5 segundos (suave, abdominal, não forçado)",
+            "EXPIRAR pela boca: 5 segundos (lento, completo, soltar)",
+            "Manter durante 5 minutos = aproximadamente 30 ciclos",
+            "Na expiração: imaginar que o coração amolece e expande",
+            "Opcional: imaginar respirar através do coração",
+            "Registar estado antes (0–10) e imediatamente após (0–10)"
+          ],
+          "scoring": {
+            "stress_pre_0_10": "antes",
+            "stress_pos_0_10": "após",
+            "delta_stress": "pré - pós",
+            "hrv_pos_rmssd": "se wearable disponível",
+            "target_delta": "> 2.0 pontos de redução"
+          },
+          "therapist_notes": "Delta consistentemente < 0.5 após 2 semanas pode indicar dissociação somática — o utilizador não está a conectar com o exercício. Explorar resistência ou adaptar para respiração guiada por áudio.",
+          "frequency": "diária mínimo 1x — idealmente 2x (manhã + antes de M3)",
+          "progression": {
+            "iniciante": "3 min (18 ciclos)",
+            "intermedio": "5 min padrão",
+            "avancado": "10 min com variações (4-6, 5-5, 6-4) e análise de HRV"
+          }
+        },
+        {
+          "id": "EX2.3",
+          "name": "Protocolo de Janela de Plasticidade",
+          "level": "intermedio",
+          "type": "avaliacao_de_estado",
+          "duration_min": 2,
+          "scientific_basis": "Cronobiologia da consolidação — picos de BDNF e regulação cortisol adaptativo",
+          "scientific_reference": "Bhaskaran & Bhaskaran (2013) — BDNF e consolidação; Dallman et al. (2006) — Cortisol e memória",
+          "instructions": [
+            "Após EX2.2, avaliar em 3 dimensões (0–10 cada):",
+            "CLAREZA MENTAL: 'A minha mente está limpa e disponível?'",
+            "ABERTURA EMOCIONAL: 'Sinto-me emocionalmente disponível para explorar?'",
+            "ENERGIA DISPONÍVEL: 'Tenho energia para trabalho interior?'",
+            "Calcular soma (0–30)",
+            "≥ 21: iniciar M3 com plena confiança",
+            "15–20: apenas exercícios leves de M3 (EX3.4)",
+            "< 15: não avançar para M3 — continuar com EX2.1 ou descansar"
+          ],
+          "scoring": {
+            "clareza_0_10": "dimensão cognitiva",
+            "abertura_0_10": "dimensão emocional",
+            "energia_0_10": "dimensão fisiológica",
+            "score_janela": "soma das 3",
+            "decisao_sistema": "automática com base no score"
+          },
+          "frequency": "antes de cada sessão de M3"
+        },
+        {
+          "id": "EX2.4",
+          "name": "Mapeamento de Ritmo Circadiano Pessoal",
+          "level": "avancado",
+          "type": "analise_cronobiologica",
+          "duration_min": "passivo — dados coletados ao longo de 2 semanas",
+          "scientific_basis": "Cronobiologia — relógio circadiano e performance cognitiva",
+          "scientific_reference": "May & Hasher (1998) — Efeitos circadianos na memória; Anderson et al. (2014)",
+          "instructions": [
+            "Durante 2 semanas: registar score de janela (EX2.3) em 4 momentos do dia:",
+            "Momento 1: 7–9h | Momento 2: 11–13h | Momento 3: 15–17h | Momento 4: 20–22h",
+            "Sistema gera curva circadiana pessoal após 14 dias",
+            "Identificar: qual período do dia tem score de janela mais alto?",
+            "Recomendar: agendar M3 sempre neste período",
+            "Verificar: existe variabilidade entre dias úteis e fins de semana?"
+          ],
+          "scoring": {
+            "pico_circadiano_horario": "período identificado",
+            "score_medio_por_periodo": "média de 14 dias por slot",
+            "variabilidade_semanal": "desvio padrão entre dias",
+            "recomendacao_agendamento": "gerada automaticamente"
+          },
+          "therapist_notes": "Utilizadores com pico circadiano nocturno que tentam fazer M3 de manhã têm eficácia reduzida. Respeitar o ritmo individual aumenta substancialmente a adesão e o resultado.",
+          "frequency": "avaliação mensal após mapeamento inicial"
+        },
+        {
+          "id": "EX2.5",
+          "name": "Protocolo de Regulação de Emergência — 60 Segundos",
+          "level": "intermedio",
+          "type": "protocolo_rapido",
+          "duration_min": 1,
+          "scientific_basis": "Activação rápida do sistema parassimpático — reflexo de mergulho e regulação vagal",
+          "scientific_reference": "Porges (2011) — Teoria Polivagal; Activação vagal rápida",
+          "use_case": "Stress súbito > 8 ou antes de situação exigente",
+          "instructions": [
+            "TÉCNICA FISIOLÓGICA DE SUSPIRAR: inspirar completamente pelo nariz",
+            "Tomar um segundo gole de ar pequeno no topo da inspiração",
+            "Expirar LENTAMENTE e por completo pela boca (duração longa)",
+            "Repetir 3 vezes — total aproximado de 60 segundos",
+            "Esta técnica activa o sistema parassimpático mais rapidamente do que qualquer outra",
+            "Validada por Huberman Lab (Stanford, 2021) para redução imediata de stress"
+          ],
+          "scoring": {
+            "stress_antes_0_10": "registo imediato",
+            "stress_depois_0_10": "após os 3 ciclos",
+            "delta": "esperado > 1.5 em 60 segundos"
+          },
+          "frequency": "sempre que stress > 8 — antes de qualquer outra intervenção"
+        }
+      ],
+
+      "kpis": [
+        {
+          "id": "KPI_M2_1",
+          "name": "Índice de Estabilidade de Estado (IES)",
+          "formula": "10 − desvio_padrao_stress_7_dias",
+          "scale": "0–10",
+          "target_4w": "> 6.5",
+          "target_8w": "> 7.5"
+        },
+        {
+          "id": "KPI_M2_2",
+          "name": "Delta de Coerência Respiratória Médio",
+          "formula": "média dos deltas stress pré-pós EX2.2 nos últimos 14 dias",
+          "scale": "0–10",
+          "target_4w": "delta médio > 2.0",
+          "target_8w": "delta médio > 2.8"
+        },
+        {
+          "id": "KPI_M2_3",
+          "name": "Frequência de Janelas Óptimas",
+          "formula": "sessões com score ≥ 21 / total sessões",
+          "scale": "0–1",
+          "target_8w": "> 0.55",
+          "note": "Aumento indica melhoria do estado basal — menos dependência de regulação activa"
+        },
+        {
+          "id": "KPI_M2_4",
+          "name": "HRV Basal (RMSSD)",
+          "formula": "média RMSSD em repouso padronizado (5 min, manhã, antes de cafeína)",
+          "scale": "ms",
+          "target_8w": "aumento de 10% vs baseline",
+          "requires_wearable": true,
+          "note": "RMSSD normal adulto: 20–60ms. Variação individual é mais importante que valor absoluto."
+        },
+        {
+          "id": "KPI_M2_5",
+          "name": "Pico Circadiano Identificado",
+          "formula": "binário — identificado / não identificado",
+          "scale": "sim/não",
+          "target": "identificado após 2 semanas de registo",
+          "note": "Indicador de autoconhecimento — base para optimização de agendamento de M3"
+        }
+      ],
+
+      "contraindications": [
+        "Não usar respiração 5-5 com utilizadores com hiperventilação crónica sem adaptação gradual",
+        "HRV pode ser artificialmente baixa em utilizadores a tomar beta-bloqueadores — normalizar expectativas",
+        "Score de janela < 10 por mais de 3 dias consecutivos → investigar causa (sono, nutrição, stress agudo)"
+      ],
+
+      "integration_with_other_modules": {
+        "M1_NeuroMap": "Score de estado M2 deve ser registado ANTES de qualquer avaliação de M1",
+        "M3_ReconstructionEngine": "Score de janela determina se M3 pode ser iniciado e com que intensidade",
+        "M4_FrequencySupport": "EX4.2 Alpha activo durante todo o M2 — amplifica efeito regulatório"
+      }
+    },
+
+    "M3_ReconstructionEngine": {
+      "id": "M3",
+      "name": "Reconstruction Engine",
+      "icon": "🗂️",
+      "tagline": "Motor de reconstrução, integração e neuroplasticidade activa",
+      "version": "2.0",
+      "description": "Módulo central — o coração do Memory Systems™. Aplica técnicas de reconsolidação, evocação guiada, reescrita narrativa e reforço por espaçamento para reorganizar activamente a memória. Só activo quando M2 confirma janela de plasticidade.",
+      "session_frequency": "3–5x por semana (na janela de plasticidade confirmada)",
+      "session_duration_min": 20,
+      "prerequisite": "M2 score de janela ≥ 15",
+
+      "session_flow": [
+        { "step": 1, "name": "Verificação de Janela", "duration_min": 1, "description": "Confirmar score M2 ≥ 15. Se < 15: encerrar e voltar após regulação." },
+        { "step": 2, "name": "Intenção da Sessão", "duration_min": 2, "description": "Escolher: trabalhar memória específica, consolidar aprendizagem recente, ou revisão espaçada." },
+        { "step": 3, "name": "Exercício Principal", "duration_min": 12, "description": "Aplicar exercício selecionado (EX3.1 a EX3.5) conforme intenção e nível." },
+        { "step": 4, "name": "Integração", "duration_min": 3, "description": "Respiração lenta. Deixar o conteúdo assentar. Não analisar imediatamente." },
+        { "step": 5, "name": "Registo de Insight", "duration_min": 2, "description": "Anotar: o que surgiu de novo? Que sensação ficou? Próxima revisão agendada?" }
+      ],
+
+      "scientific_references": [
+        { "citation": "Nader, K. et al. (2000). Fear memories require protein synthesis in the amygdala for reconsolidation after retrieval. Nature.", "relevance": "Base da reconsolidação — memórias tornam-se lábeis após evocação, abrindo janela de modificação" },
+        { "citation": "Libby, L.K. & Eibach, R.P. (2011). Visual perspective in mental imagery. Advances in Experimental Social Psychology.", "relevance": "Base do EX3.1 — perspectiva de observador reduz carga emocional de memórias" },
+        { "citation": "Pennebaker, J.W. (1997). Writing about emotional experiences as a therapeutic process. Psychological Science.", "relevance": "Base do EX3.4 — escrita expressiva e integração emocional" },
+        { "citation": "Cepeda, N.J. et al. (2006). Distributed practice in verbal recall tasks. Psychological Bulletin.", "relevance": "Base do protocolo de espaçamento EX3.3 — espaçamento optimizado para retenção" },
+        { "citation": "McAdams, D.P. (2001). The psychology of life stories. Review of General Psychology.", "relevance": "Coerência narrativa e identidade — fundamentação do EX3.4" }
+      ],
+
+      "data_structure": {
+        "inputs": [
+          {
+            "id": "I3.1",
+            "name": "Memória Alvo da Sessão",
+            "type": "selecao_guiada",
+            "fields": ["descricao_da_memoria", "periodo_temporal", "pessoas_envolvidas", "local", "emocao_dominante", "impacto_percebido_0_10", "categoria_tematica", "processada_anteriormente_sim_nao"]
+          },
+          {
+            "id": "I3.2",
+            "name": "Estado de Entrada Confirmado",
+            "type": "importado_de_M2",
+            "fields": ["score_janela_plasticidade", "hrv_se_disponivel", "estado_emocional_confirmado"]
+          },
+          {
+            "id": "I3.3",
+            "name": "Registo Pós-Sessão",
+            "type": "reflexao_estruturada",
+            "fields": ["percepcao_de_mudanca_0_10", "novos_detalhes_surgidos", "carga_emocional_pos_0_10", "insight_principal", "sensacao_corporal_pos", "proxima_revisao_data"]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "O3.1",
+            "name": "Linha Temporal Reconstruída",
+            "type": "visualizacao_interativa",
+            "fields": ["eventos_mapeados", "intensidade_emocional_por_evento", "padroes_tematicos", "pontos_de_viragem", "evolucao_da_narrativa"]
+          },
+          {
+            "id": "O3.2",
+            "name": "Índice de Consolidação (IC)",
+            "type": "indicador_calculado",
+            "formula": "média ponderada de fidelidade_evocacao nas revisões espaçadas",
+            "scale": "0–100"
+          },
+          {
+            "id": "O3.3",
+            "name": "Relatório Neuroadaptativo",
+            "type": "pdf_exportavel",
+            "fields": ["memorias_trabalhadas", "IC_evolucao", "ICN_evolucao", "padroes_integrados", "recomendacoes_fase_seguinte"]
+          }
+        ]
+      },
+
+      "exercises_and_protocols": [
+        {
+          "id": "EX3.1",
+          "name": "Evocação em Três Perspetivas — Reconsolidação Adaptativa",
+          "level": "intermedio",
+          "type": "protocolo_de_reconsolidacao",
+          "duration_min": 12,
+          "scientific_basis": "Reconsolidação da memória (Nader, 2000) + Perspectiva de observador (Libby & Eibach, 2011)",
+          "scientific_reference": "Nader et al. (2000); Libby & Eibach (2011); Walker (2017) — Janela de reconsolidação REM",
+          "mechanism": "A evocação torna a memória lábil (reconsolidação). A perspectiva de observador activa processamento cortical vs. amigdalar. O futuro integra sentido — reduz carga emocional por antecipação positiva.",
+          "instructions": [
+            "Evocar a memória alvo claramente na mente",
+            "PERSPECTIVA 1 — PARTICIPANTE (5 min):",
+            "  Reviver na primeira pessoa — ver pelos próprios olhos",
+            "  Sentir as sensações no corpo — onde e como?",
+            "  Ouvir, cheirar, tocar — máximo detalhe sensorial",
+            "  Classificar carga emocional (0–10)",
+            "PERSPECTIVA 2 — OBSERVADOR (4 min):",
+            "  Imaginar-se a ver a cena de fora — como câmara de cinema",
+            "  Ver a si próprio na cena — que expressão tem? Que postura?",
+            "  Com compaixão e sem julgamento",
+            "  Classificar carga emocional (0–10)",
+            "PERSPECTIVA 3 — FUTURO (3 min):",
+            "  Imaginar-se 10 anos depois a olhar para este momento",
+            "  O que aprendeu? O que se tornou graças a esta experiência?",
+            "  Que mensagem enviaria à versão mais jovem?",
+            "  Classificar carga emocional (0–10)",
+            "Registar: que perspectiva foi mais reveladora? Que detalhe surgiu de novo?"
+          ],
+          "scoring": {
+            "carga_P1_0_10": "participante",
+            "carga_P2_0_10": "observador",
+            "carga_P3_0_10": "futuro",
+            "delta_integracao": "P1 − P3 (positivo = redução de carga)",
+            "novo_detalhe_surgido": "sim/não + descrição",
+            "insight_central": "texto livre"
+          },
+          "therapist_notes": "Delta negativo (P3 > P1) é raro mas sinaliza que a perspectiva do futuro está carregada de ansiedade — não forçar. Trabalhar M2 primeiro. Memórias com P1 > 8: supervisão recomendada.",
+          "frequency": "1x por sessão, máximo 2x/semana por memória específica",
+          "progression": {
+            "intermedio": "3 perspectivas como descrito",
+            "avancado": "adicionar perspectiva de pessoa significativa: 'Como alguém que te ama veria esta cena?'"
+          }
+        },
+        {
+          "id": "EX3.2",
+          "name": "Associação Contextual Multi-Modal",
+          "level": "iniciante",
+          "type": "exercicio_de_encoding_profundo",
+          "duration_min": 10,
+          "scientific_basis": "Teoria de codificação elaborativa (Craik & Lockhart, 1972) + Efeito de contexto (Godden & Baddeley, 1975)",
+          "scientific_reference": "Craik & Lockhart (1972) — Níveis de processamento; Paivio (1991) — Teoria da codificação dual",
+          "mechanism": "Memórias codificadas em múltiplas modalidades (visual, emocional, narrativa, cinestésica) têm 3–4x mais probabilidade de serem recuperadas. Cada modalidade cria uma 'entrada' diferente para o mesmo conteúdo.",
+          "instructions": [
+            "Escolher conteúdo a consolidar (memória, aprendizagem, insight)",
+            "ASSOCIAÇÃO VISUAL: criar imagem mental vívida e bizarra que represente o conteúdo",
+            "  Quanto mais exagerada, mais memorável (efeito de isolamento)",
+            "ASSOCIAÇÃO EMOCIONAL: ligar a uma emoção conhecida e intensa",
+            "  'Isto faz-me sentir ____ porque ____'",
+            "ASSOCIAÇÃO NARRATIVA: integrar numa história pessoal em 3 frases",
+            "  'Isto liga-se à minha história porque ____'",
+            "ASSOCIAÇÃO CINESTÉSICA: associar a sensação ou movimento corporal",
+            "  Escrever no ar, fazer gesto, sentir no corpo",
+            "Escrever as 4 associações em detalhe",
+            "24h depois: recuperar sem apoio — qual associação foi mais eficaz?"
+          ],
+          "scoring": {
+            "associacoes_criadas": "0–4",
+            "riqueza_visual_0_10": "detalhe da imagem mental",
+            "retencao_24h": "0–4 recuperadas",
+            "modalidade_mais_eficaz": "identificar padrão pessoal ao longo do tempo"
+          },
+          "therapist_notes": "Cada utilizador tem modalidade dominante. Rastrear qual funciona melhor individualmente — personalizar as sessões futuras para essa modalidade. Utilizadores visuais → priorizar imagem. Utilizadores cinestésicos → priorizar movimento.",
+          "frequency": "3x/semana para novos conteúdos",
+          "progression": {
+            "iniciante": "2 associações (visual + emocional)",
+            "intermedio": "3 associações",
+            "avancado": "4 associações + identificação de modalidade dominante pessoal"
+          }
+        },
+        {
+          "id": "EX3.3",
+          "name": "Protocolo de Reforço Neuroplástico por Espaçamento",
+          "level": "intermedio",
+          "type": "sistema_de_repeticao_espacada",
+          "duration_min": 8,
+          "scientific_basis": "Curva do esquecimento de Ebbinghaus + Spaced Repetition (Cepeda et al., 2006)",
+          "scientific_reference": "Ebbinghaus (1885/1913); Cepeda et al. (2006) — Meta-análise de espaçamento óptimo",
+          "mechanism": "A recuperação activa (retrieval practice) é mais eficaz que a releitura. Cada acto de recuperação bem-sucedido fortalece o traço mnémico. O espaçamento crescente optimiza retenção a longo prazo.",
+          "schedule": {
+            "revisao_1": "24 horas após encoding",
+            "revisao_2": "3 dias após encoding",
+            "revisao_3": "7 dias após encoding",
+            "revisao_4": "21 dias após encoding",
+            "revisao_5": "60 dias após encoding (se necessário)"
+          },
+          "instructions": [
+            "Sistema notifica utilizador no momento certo da revisão",
+            "Utilizador tenta evocar o conteúdo SEM qualquer apoio (30–60 segundos de esforço)",
+            "Classificar esforço de recuperação (1=fácil / 5=difícil / 0=não recuperei)",
+            "Revelar o conteúdo original — comparar com a evocação",
+            "Classificar fidelidade (0–10): quão próxima foi a evocação do original?",
+            "Anotar: que detalhes faltaram? Que foi distorcido?",
+            "Sistema ajusta intervalo da próxima revisão com base no score",
+            "Score 9–10: próximo intervalo × 2 | Score 5–8: intervalo padrão | Score < 5: revisão em 1 dia"
+          ],
+          "scoring": {
+            "esforco_recuperacao_1_5": "dificuldade sentida",
+            "fidelidade_evocacao_0_10": "precisão vs. original",
+            "intervalo_proximo_automatico": "calculado pelo algoritmo",
+            "curva_retencao": "gerada ao longo do tempo"
+          },
+          "therapist_notes": "O esforço de recuperação é o mecanismo activo — não facilitar com pistas prematuramente. A dificuldade desejável (desirable difficulty) é parte do processo. Apenas se score = 0 por 2 revisões consecutivas: oferecer pista.",
+          "frequency": "automático — sistema agenda conforme protocolo",
+          "progression": {
+            "iniciante": "3 revisões (1d, 3d, 7d)",
+            "intermedio": "4 revisões padrão",
+            "avancado": "5 revisões + análise de curva de retenção pessoal"
+          }
+        },
+        {
+          "id": "EX3.4",
+          "name": "Escrita Autobiográfica Estruturada — Coerência Narrativa",
+          "level": "iniciante",
+          "type": "exercicio_narrativo_terapeutico",
+          "duration_min": 15,
+          "scientific_basis": "Escrita expressiva e integração (Pennebaker, 1997) + Coerência narrativa e identidade (McAdams, 2001)",
+          "scientific_reference": "Pennebaker & Smyth (2016) — Opening Up by Writing It Down; McAdams (2001)",
+          "mechanism": "A narrativa estruturada transforma experiências fragmentadas em sequências causais coerentes. A coerência narrativa prediz bem-estar psicológico, sentido de identidade e capacidade de regulação emocional.",
+          "instructions": [
+            "Escolher um período de vida ou evento significativo",
+            "FASE 1 — ESCRITA LIVRE (5 min): escrever sem parar, sem correção, sem julgamento",
+            "  Não se preocupar com gramática — escrever o que sente",
+            "FASE 2 — LEITURA E EXTRAÇÃO (3 min):",
+            "  Reler o que escreveu",
+            "  Identificar: qual é o tema central? Que emoção é dominante?",
+            "  Que papel tem o protagonista (eu) nesta história?",
+            "FASE 3 — REESCRITA INTEGRATIVA (5 min):",
+            "  Reescrever em 3 frases com estrutura:",
+            "  'O que aconteceu: ____'",
+            "  'O que aprendi: ____'",
+            "  'Quem me tornei: ____'",
+            "FASE 4 — CLASSIFICAÇÃO (2 min):",
+            "  Coerência temporal (há sequência lógica de eventos?) 0–10",
+            "  Coerência causal (o efeito segue a causa?) 0–10",
+            "  Coerência temática (há um fio condutor?) 0–10"
+          ],
+          "scoring": {
+            "coerencia_temporal_0_10": "sequência lógica",
+            "coerencia_causal_0_10": "relação causa-efeito",
+            "coerencia_tematica_0_10": "fio condutor",
+            "ICN": "(temporal + causal + tematica) / 3",
+            "emocao_dominante_identificada": "categoria",
+            "papel_protagonista": "agente / paciente / observador"
+          },
+          "therapist_notes": "Papel de 'paciente' crónico (coisas acontecem ao utilizador, sem agência) é indicador importante. Trabalhar gradualmente para narrativa de agência. ICN < 4 consistente → considerar suporte terapêutico externo.",
+          "frequency": "semanal",
+          "progression": {
+            "iniciante": "apenas fase 1 e 3 (escrita livre + 3 frases)",
+            "intermedio": "protocolo completo 4 fases",
+            "avancado": "análise longitudinal de evolução do ICN + comparação de narrativas de diferentes períodos"
+          }
+        },
+        {
+          "id": "EX3.5",
+          "name": "Protocolo de Integração Somática da Memória",
+          "level": "avancado",
+          "type": "exercicio_somatico_cognitivo",
+          "duration_min": 15,
+          "scientific_basis": "Memória corporal e processamento somático (van der Kolk, 2014) + Embodied cognition (Shapiro, 2011)",
+          "scientific_reference": "Van der Kolk (2014) — The Body Keeps the Score; Levine (1997) — Waking the Tiger",
+          "mechanism": "Memórias com forte componente emocional são armazenadas somaticamente. Processar através do corpo (em vez de apenas da mente) acessa camadas de memória não acessíveis pelo pensamento verbal.",
+          "instructions": [
+            "Evocar a memória alvo suavemente (não mergulhar — observar de longe)",
+            "PASSO 1 — LOCALIZAÇÃO SOMÁTICA: onde no corpo sente esta memória?",
+            "  Colocar a mão nessa zona",
+            "  Descrever a sensação: temperatura, textura, peso, movimento",
+            "PASSO 2 — DIÁLOGO SOMÁTICO: 'Se esta sensação tivesse voz, o que diria?'",
+            "  Escrever a resposta sem filtro",
+            "PASSO 3 — MOVIMENTO ORGÂNICO: deixar o corpo mover-se como quiser",
+            "  Sem julgamento — pode ser mínimo (respiração profunda) ou maior",
+            "  O movimento é a memória a completar o que ficou incompleto",
+            "PASSO 4 — OBSERVAÇÃO FINAL: como se sente o corpo agora?",
+            "  Que mudou? Há mais espaço? Mais leveza?"
+          ],
+          "scoring": {
+            "localizacao_somatica": "região do corpo",
+            "descricao_sensacao": "texto livre",
+            "carga_pre_0_10": "intensidade antes",
+            "carga_pos_0_10": "intensidade depois",
+            "delta_somático": "pré - pós",
+            "movimento_surgido": "sim/não + descrição"
+          },
+          "therapist_notes": "Este exercício é poderoso e deve ser introduzido gradualmente. Utilizadores com histórico de trauma severo → apenas com acompanhamento profissional. Não forçar se utilizador reportar dissociação ou intensidade súbita > 7.",
+          "safety_note": "Se carga emocional subir acima de 8 durante o exercício: interromper, activar EX2.2 imediatamente e encerrar sessão.",
+          "frequency": "máximo 2x/semana",
+          "progression": {
+            "avancado": "apenas após 4 semanas de prática com EX3.1 e EX3.4"
+          }
+        }
+      ],
+
+      "kpis": [
+        {
+          "id": "KPI_M3_1",
+          "name": "Índice de Consolidação (IC)",
+          "formula": "média ponderada de fidelidade_evocacao nas últimas 4 revisões × 10",
+          "scale": "0–100",
+          "target_4w": "> 60",
+          "target_8w": "> 78"
+        },
+        {
+          "id": "KPI_M3_2",
+          "name": "Índice de Coerência Narrativa (ICN)",
+          "formula": "(coerencia_temporal + coerencia_causal + coerencia_tematica) / 3 × 10",
+          "scale": "0–100",
+          "target_4w": "> 55",
+          "target_8w": "> 72"
+        },
+        {
+          "id": "KPI_M3_3",
+          "name": "Delta de Integração Emocional (DIE)",
+          "formula": "carga_P1 − carga_P3 média das últimas 5 sessões EX3.1",
+          "scale": "−10 a +10",
+          "target_8w": "delta médio > 2.5",
+          "alert_threshold": "delta negativo persistente → supervisão"
+        },
+        {
+          "id": "KPI_M3_4",
+          "name": "Papel Narrativo — Agência",
+          "formula": "sessões com papel_protagonista = agente / total sessões EX3.4",
+          "scale": "0–1",
+          "target_8w": "> 0.65",
+          "note": "Aumento de agência narrativa correlaciona com aumento de bem-estar (McAdams, 2001)"
+        },
+        {
+          "id": "KPI_M3_5",
+          "name": "Curva de Retenção por Espaçamento",
+          "formula": "slope da evolução de fidelidade_evocacao ao longo das 4–5 revisões",
+          "scale": "pontos por revisão",
+          "target": "slope positivo (melhoria progressiva com cada revisão)",
+          "alert": "slope negativo → revisar protocolo de encoding"
+        }
+      ],
+
+      "contraindications": [
+        "Não iniciar M3 sem score de janela M2 ≥ 15 — eficácia comprometida e risco de reforço negativo",
+        "Memórias com carga emocional P1 > 8 → acompanhamento profissional recomendado",
+        "EX3.5 não deve ser aplicado em contexto de trauma severo sem supervisão clínica",
+        "Utilizadores em fase aguda de luto → adiar M3 até estabilização (mínimo 6 semanas)"
+      ],
+
+      "integration_with_other_modules": {
+        "M1_NeuroMap": "Padrões identificados em M1 (utilidade < −2) → memórias alvo de M3",
+        "M2_FlowTracker": "Score de janela M2 é prerequisito obrigatório para iniciar M3",
+        "M4_FrequencySupport": "EX4.1 Theta activo durante EX3.1 e EX3.2 — potencia plasticidade"
+      }
+    },
+
+    "M4_FrequencySupport": {
+      "id": "M4",
+      "name": "Frequency Support",
+      "icon": "🎧",
+      "tagline": "Suporte auditivo adaptativo para estados de consolidação",
+      "version": "2.0",
+      "description": "Módulo de suporte — não é mecanismo causal mas amplificador contextual. Cria o estado auditivo que maximiza a receptividade dos outros módulos. Funciona através de condicionamento associativo, regulação autonômica e atenção sustentada.",
+      "session_frequency": "conforme módulo activo — opcional mas recomendado",
+      "session_duration_min": "variável — acompanha o módulo activo",
+      "important_disclaimer": "Frequências auditivas são estímulos de suporte, não mecanismos neurais directos. Não substituem prática cognitiva activa. Eficácia mediada por associação, atenção e estado de receptividade.",
+      "refined_knowledge": {
+        "what_works": "Condicionamento associativo (âncora), regulação do estado de alerta, redução de distracção, indução de atenção sustentada",
+        "what_does_not": "Frequências não 'entram no cérebro' directamente. Não há evidência de que 528Hz cure DNA ou que 741Hz active intuição como mecanismo físico",
+        "recommended_framing": "Usar como âncora psicológica e regulador de estado — eficaz e honesto cientificamente"
+      },
+
+      "session_flow": [
+        { "step": 1, "name": "Selecção de Protocolo", "duration_min": 1, "description": "Sistema selecciona automaticamente com base no módulo activo e estado M2." },
+        { "step": 2, "name": "Activação", "duration_min": 2, "description": "Iniciar áudio 2 min antes do exercício principal — permite adaptação do sistema nervoso." },
+        { "step": 3, "name": "Suporte Activo", "duration_min": "duração do módulo", "description": "Manter volume baixo (40–50 dB) — suporte, não dominância." },
+        { "step": 4, "name": "Encerramento Gradual", "duration_min": 2, "description": "Reduzir volume gradualmente nos últimos 2 min — retorno suave." }
+      ],
+
+      "scientific_references": [
+        { "citation": "Buzsáki, G. (2002). Theta oscillations in the hippocampus. Neuron.", "relevance": "Oscilações theta endógenas e consolidação — base conceptual (não de frequências externas)" },
+        { "citation": "Klimesch, W. (1999). EEG alpha and theta oscillations. Brain Research Reviews.", "relevance": "Alpha e atenção relaxada — contextualização das frequências de suporte" },
+        { "citation": "Huberman, A. & Spiegel, D. (2022). Physiological sigh. Cell Reports Medicine.", "relevance": "Base científica do EX4.5 — suspiro fisiológico e regulação de CO2" }
+      ],
+
+      "data_structure": {
+        "inputs": [
+          {
+            "id": "I4.1",
+            "name": "Contexto de Activação",
+            "type": "importado_automaticamente",
+            "fields": ["modulo_activo", "score_estado_M2", "objetivo_sessao", "nivel_progressao"]
+          },
+          {
+            "id": "I4.2",
+            "name": "Preferência Auditiva",
+            "type": "perfil_pessoal",
+            "fields": ["tipo_som_preferido", "sensibilidade_a_batidas_binaurais", "volume_confortavel_db", "sons_a_evitar"]
+          },
+          {
+            "id": "I4.3",
+            "name": "Feedback Pós-Sessão",
+            "type": "avaliacao_rapida",
+            "fields": ["eficacia_percebida_0_10", "conforto_0_10", "distractibilidade_0_10", "preferencia_repetir_sim_nao"]
+          }
+        ],
+        "outputs": [
+          {
+            "id": "O4.1",
+            "name": "Playlist Adaptativa Personalizada",
+            "type": "sequencia_auditiva",
+            "fields": ["protocolo_selecionado", "duracao_total", "volume_recomendado", "tipo_headphones_recomendado"]
+          },
+          {
+            "id": "O4.2",
+            "name": "Perfil Auditivo Pessoal",
+            "type": "perfil_aprendido",
+            "fields": ["protocolos_mais_eficazes", "correlacao_som_performance", "preferencias_por_modulo", "ancora_pessoal_ativa"]
+          }
+        ]
+      },
+
+      "exercises_and_protocols": [
+        {
+          "id": "EX4.1",
+          "name": "Protocolo Theta — Suporte à Consolidação",
+          "level": "iniciante",
+          "type": "suporte_auditivo",
+          "frequency_range_hz": "4–8 (frequência base; batida binaural ou isocrônica)",
+          "duration_min": "acompanha M3",
+          "scientific_basis": "Oscilações theta hipocampal associadas a encoding e consolidação episódica (Buzsáki, 2002)",
+          "framing_correto": "Cria ambiente auditivo que facilita atenção sustentada e reduz distracção — não sincroniza o cérebro directamente",
+          "instructions": [
+            "Activar 2 min antes de iniciar M3",
+            "Usar headphones over-ear (batidas binaurais requerem som separado em cada ouvido)",
+            "Volume: 40–50 dB — como chuva suave ao longe",
+            "Opção A: batida binaural theta (diferença de 6 Hz entre ouvidos — ex: 100 Hz esquerdo, 106 Hz direito)",
+            "Opção B: sons naturais de baixa frequência (chuva, rio, vento suave)",
+            "Manter durante toda a sessão de M3",
+            "Desligar gradualmente 2 min antes de encerrar"
+          ],
+          "use_case": "M3 — todos os exercícios de evocação e reconstrução",
+          "therapist_notes": "Batidas binaurais podem causar desconforto em utilizadores com epilepsia auditiva — usar opção B para esta população.",
+          "frequency": "em cada sessão de M3"
+        },
+        {
+          "id": "EX4.2",
+          "name": "Protocolo Alpha — Atenção Relaxada",
+          "level": "iniciante",
+          "type": "suporte_auditivo",
+          "frequency_range_hz": "8–12",
+          "duration_min": "acompanha M1 e M2",
+          "scientific_basis": "Ondas alpha e estado relaxado-alerta óptimo para aprendizagem e avaliação cognitiva (Klimesch, 1999)",
+          "instructions": [
+            "Activar no início da avaliação NeuroMap (M1) ou do Flow Tracker (M2)",
+            "Preferência: sons naturais de média frequência — canto de pássaros, brisa",
+            "Ou: música instrumental lenta sem letra (tempo 60–70 BPM)",
+            "Volume: 35–45 dB — presença leve, não invasiva",
+            "Avaliar correlação com score de atenção ao longo de 4 semanas"
+          ],
+          "use_case": "M1 — avaliações cognitivas; M2 — check-in de estado"
+        },
+        {
+          "id": "EX4.3",
+          "name": "Estimulação Bilateral Auditiva",
+          "level": "intermedio",
+          "type": "protocolo_adjacent_emdr",
+          "duration_min": 10,
+          "scientific_basis": "Estimulação bilateral e processamento adaptativo de informação — EMDR adjacent (Shapiro, 2001)",
+          "scientific_reference": "Shapiro (2001) — EMDR; Propper & Christman (2008) — Estimulação bilateral e memória",
+          "framing_correto": "Estimulação sensorial que activa processamento alternado hemisfério esquerdo/direito, facilitando integração de memórias carregadas emocionalmente — mecanismo análogo mas distinto do EMDR clínico",
+          "instructions": [
+            "Alternar tom suave entre ouvido esquerdo e direito (1–2 Hz)",
+            "Utilizador evoca a memória alvo enquanto ouve a estimulação bilateral",
+            "Manter presença com a memória sem analisá-la — apenas observar",
+            "Sessão de 10 min com pausa de 1 min a cada 2 min",
+            "Registar carga emocional antes e depois (0–10)"
+          ],
+          "safety_note": "Apenas para memórias com carga ≤ 7. Score > 7 → encaminhar para terapeuta EMDR certificado.",
+          "scoring": {
+            "carga_pre_0_10": "antes",
+            "carga_pos_0_10": "depois",
+            "delta_processamento": "pré − pós"
+          },
+          "use_case": "M3 — memórias com carga emocional moderada (4–7)",
+          "frequency": "máximo 2x/semana por memória"
+        },
+        {
+          "id": "EX4.4",
+          "name": "Âncora Sonora Personalizada",
+          "level": "intermedio",
+          "type": "protocolo_de_ancoragem",
+          "duration_min": 5,
+          "scientific_basis": "Condicionamento clássico auditivo — associação estado-estímulo (Pavlov, 1927)",
+          "instructions": [
+            "Em estado de clareza e coerência altos (score M2 > 24):",
+            "Escolher um som pessoalmente significativo (música, tom, som natural)",
+            "Reproduzir 3 vezes consecutivas enquanto mantém o estado de coerência",
+            "Focar a intenção: 'Este som representa o meu estado de maior clareza'",
+            "Registar o som como âncora pessoal no sistema",
+            "Em sessões futuras: reproduzir âncora para evocar estado de referência",
+            "Reforçar âncora quinzenalmente nas condições originais"
+          ],
+          "scoring": {
+            "eficacia_ativacao_0_10": "estado evocado vs. estado original",
+            "tempo_ativacao_segundos": "latência da resposta",
+            "consistencia_ao_longo_do_tempo": "evolução do score de eficácia"
+          },
+          "frequency": "criação: 1x; reforço: quinzenal"
+        },
+        {
+          "id": "EX4.5",
+          "name": "Suspiro Fisiológico Duplo — Regulação de CO2",
+          "level": "iniciante",
+          "type": "protocolo_respiratorio_rapido",
+          "duration_min": 1,
+          "scientific_basis": "Suspiro duplo e regulação de CO2/O2 (Huberman & Spiegel, Cell Reports Medicine, 2022)",
+          "scientific_reference": "Huberman Lab — Physiological Sigh; validado em RCT com 108 participantes",
+          "mechanism": "O suspiro duplo reinflata os alvéolos colapsados e elimina CO2 acumulado mais eficazmente do que qualquer outra técnica respiratória em 60 segundos. Activa o sistema parassimpático rapidamente.",
+          "instructions": [
+            "Inspirar completamente pelo nariz",
+            "No topo da inspiração: tomar mais um pequeno gole de ar (suspiro duplo)",
+            "Expirar LENTAMENTE e completamente pela boca — o mais longo possível",
+            "Repetir 3 vezes",
+            "Total: aproximadamente 60 segundos",
+            "Usar como preparação imediata antes de qualquer sessão de M3"
+          ],
+          "use_case": "Preparação rápida para M3 ou regulação de stress agudo",
+          "frequency": "sempre que necessário — sem limite"
+        }
+      ],
+
+      "kpis": [
+        {
+          "id": "KPI_M4_1",
+          "name": "Eficácia Percebida do Suporte Auditivo",
+          "formula": "média de eficacia_percebida_0_10 nas últimas 10 sessões por protocolo",
+          "scale": "0–10",
+          "target_4w": "> 6.0",
+          "target_8w": "> 7.0"
+        },
+        {
+          "id": "KPI_M4_2",
+          "name": "Correlação Som-Performance Cognitiva",
+          "formula": "correlação entre eficacia_suporte e score_neuromap_sessao",
+          "scale": "−1 a +1",
+          "target": "> 0.3 (correlação positiva moderada)",
+          "note": "Indica se o suporte auditivo está efectivamente a amplificar a performance"
+        },
+        {
+          "id": "KPI_M4_3",
+          "name": "Score de Âncora Sonora",
+          "formula": "media de eficacia_ativacao_0_10 nas últimas 5 activações",
+          "scale": "0–10",
+          "target_4w": "> 6.5",
+          "target_8w": "> 7.5"
+        },
+        {
+          "id": "KPI_M4_4",
+          "name": "Delta de Regulação por Suspiro Fisiológico",
+          "formula": "stress_pre − stress_pos EX4.5 (média de 7 dias)",
+          "scale": "0–10",
+          "target": "delta > 1.5 em 60 segundos"
+        }
+      ],
+
+      "contraindications": [
+        "Batidas binaurais: não usar com epilepsia auditiva ou sensibilidade auditiva extrema",
+        "EX4.3 bilateral: apenas memórias com carga ≤ 7 — acima → EMDR clínico",
+        "Volume > 60 dB contraproducente — activar sistema de alerta no app"
+      ],
+
+      "integration_with_other_modules": {
+        "M1_NeuroMap": "EX4.2 Alpha → ativar 5 min antes de avaliações formais",
+        "M2_FlowTracker": "EX4.2 Alpha → suporte durante check-in de estado",
+        "M3_ReconstructionEngine": "EX4.1 Theta → suporte durante evocação e reconstrução; EX4.3 → memórias com carga moderada"
+      }
+    }
+  },
+
+  "global_kpis_index": {
+    "IC":  { "name": "Índice de Consolidação",          "module": "M3", "scale": "0–100", "target_8w": "> 78" },
+    "ICN": { "name": "Índice de Coerência Narrativa",   "module": "M3", "scale": "0–100", "target_8w": "> 72" },
+    "IES": { "name": "Índice de Estabilidade de Estado","module": "M2", "scale": "0–10",  "target_8w": "> 7.5" },
+    "INE": { "name": "Índice de Nitidez Episódica",     "module": "M1", "scale": "0–100", "target_8w": "> 70" },
+    "TPA": { "name": "Taxa de Padrões Adaptativos",     "module": "M1", "scale": "0–1",   "target_8w": "> 0.65" },
+    "DIE": { "name": "Delta de Integração Emocional",   "module": "M3", "scale": "−10/+10","target_8w": "média > 2.5" },
+    "HRV": { "name": "HRV Basal (RMSSD)",               "module": "M2", "scale": "ms",    "target_8w": "+10% vs baseline" }
+  },
+
+  "metadata": {
+    "created_by": "Cyntreon Holding OÜ",
+    "ecosystem": "Inteligência Integrativa™",
+    "language": "pt-BR",
+    "version": "2.0.0",
+    "total_exercises": 20,
+    "total_kpis": 18,
+    "total_scientific_references": 14
+  }
+}

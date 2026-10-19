@@ -1,0 +1,504 @@
+{
+  "system": {
+    "id": "MEMORY_SYSTEMS",
+    "name": "Memory Systems™",
+    "trademark": "Memory Systems™",
+    "version": "1.0.0",
+    "ecosystem": "Inteligência Integrativa™",
+    "category": "Neuroinformational Reconstruction",
+    "regulatory_position": "Digital Cognitive Training Tool",
+    "axis": "Continuidade",
+    "temporal_focus": "Passado",
+    "primary_function": "Estabilizar",
+    "tagline": "Sistema de Continuidade Informacional",
+    "description": "Plataforma de reorganização neuroinformacional que modela a memória humana como fluxo adaptativo entre cérebro, corpo e experiência, sustentado por plasticidade neural, estados fisiológicos e contexto emocional.",
+    "disclaimer": "Não substitui medicina, neurologia ou psicologia clínica."
+  },
+
+  "epistemological_positioning": {
+    "model_layers": [
+      {
+        "id": "L1",
+        "name": "Neurobiológica",
+        "type": "mensurável",
+        "description": "Base física e bioquímica da memória — substrato neural real"
+      },
+      {
+        "id": "L2",
+        "name": "Informacional",
+        "type": "processual",
+        "description": "Fluxo dinâmico de processamento, consolidação e recuperação"
+      },
+      {
+        "id": "L3",
+        "name": "Simbólica-experiencial",
+        "type": "interpretativa",
+        "description": "Significado, narrativa e continuidade do self"
+      }
+    ],
+    "system_model": "Sistema de Continuidade Adaptativa",
+    "core_principle": "Memória não é banco de dados estático. É fluxo dinâmico em constante reescrita."
+  },
+
+  "scientific_foundation": {
+    "biological_substrates": [
+      {
+        "name": "Neuroplasticidade",
+        "mechanism": "Reorganização sináptica — Hebbian Learning",
+        "evidence_level": "consolidado"
+      },
+      {
+        "name": "Potenciação de Longo Prazo (LTP)",
+        "mechanism": "Fortalecimento sináptico dependente de atividade",
+        "evidence_level": "consolidado"
+      },
+      {
+        "name": "Consolidação dependente do sono",
+        "mechanism": "Replay hipocampal e transferência cortico-hipocampal",
+        "evidence_level": "consolidado"
+      },
+      {
+        "name": "Rede do Modo Padrão (DMN)",
+        "mechanism": "Integração autobiográfica e prospectiva",
+        "evidence_level": "consolidado"
+      },
+      {
+        "name": "Líquido Cefalorraquidiano (LCR)",
+        "mechanism": "Transporte metabólico e homeostase neural",
+        "evidence_level": "consolidado"
+      },
+      {
+        "name": "Biofotões celulares",
+        "mechanism": "Hipótese emergente em biofísica celular",
+        "evidence_level": "emergente — uso simbólico apenas"
+      }
+    ],
+    "memory_systems": [
+      {
+        "type": "Episódica",
+        "structure": "Hipocampo",
+        "function": "Eventos autobiográficos situados no tempo e espaço"
+      },
+      {
+        "type": "Implícita / Procedural",
+        "structure": "Estriado, Cerebelo",
+        "function": "Habilidades motoras, hábitos, condicionamento"
+      },
+      {
+        "type": "Semântica",
+        "structure": "Córtex Temporal",
+        "function": "Conhecimento factual e conceptual"
+      },
+      {
+        "type": "Emocional",
+        "structure": "Amígdala",
+        "function": "Memórias com carga afetiva intensa"
+      },
+      {
+        "type": "Trabalho (Working Memory)",
+        "structure": "Córtex Pré-Frontal",
+        "function": "Manutenção e manipulação temporária de informação"
+      }
+    ],
+    "neural_states": [
+      {
+        "state": "Theta",
+        "frequency_hz": "4–8",
+        "function": "Consolidação de memória episódica",
+        "application": "Suporte auditivo durante sessões de evocação"
+      },
+      {
+        "state": "Alpha",
+        "frequency_hz": "8–12",
+        "function": "Integração e atenção relaxada",
+        "application": "Estado de entrada para exercícios cognitivos"
+      },
+      {
+        "state": "Gamma",
+        "frequency_hz": "30–80",
+        "function": "Sincronização e integração cognitiva",
+        "application": "Associado a aprendizagem de alta coerência"
+      }
+    ],
+    "important_disclaimers": [
+      "528 Hz não é frequência cerebral — pode ser usada como estímulo auditivo, não como frequência neural",
+      "Campo akáshico não é mecanismo científico — deve permanecer na camada simbólica/interpretativa",
+      "Recuperação pós-AVC requer protocolo clínico separado — não é escopo deste sistema"
+    ]
+  },
+
+  "functional_architecture": {
+    "processing_model": {
+      "name": "Fluxo Adaptativo de 3 Eixos",
+      "axes": [
+        {
+          "id": "A1",
+          "name": "Registro (Encoding)",
+          "description": "Captura e estruturação inicial da experiência"
+        },
+        {
+          "id": "A2",
+          "name": "Consolidação",
+          "description": "Estabilização e integração da informação na memória de longo prazo"
+        },
+        {
+          "id": "A3",
+          "name": "Reconstrução",
+          "description": "Recuperação contextual e reinterpretação adaptativa"
+        }
+      ],
+      "core_principle": "Memória nunca é reprodução literal. É reconstrução contextual."
+    },
+    "versioning_model": {
+      "name": "Versionamento do Ser",
+      "description": "Modelo de persistência de padrões após disrupções neurais",
+      "mechanisms": [
+        "Reorganização de rotas alternativas após trauma ou AVC",
+        "Retorno de memórias por vias emocionais",
+        "Preservação do aprendizado implícito",
+        "Persistência de padrões na memória procedural e emocional"
+      ]
+    }
+  },
+
+  "system_architecture": {
+    "core_engine": "Memory Core Engine™",
+    "layers": [
+      {
+        "id": "L1",
+        "name": "Input Layer",
+        "label": "Coleta Estruturada",
+        "components": [
+          "Testes cognitivos padronizados",
+          "Diário guiado",
+          "Registro emocional",
+          "Autoavaliação estruturada",
+          "Diário sensorial"
+        ]
+      },
+      {
+        "id": "L2",
+        "name": "Processing Engine",
+        "label": "Memory Core Engine™",
+        "components": [
+          "Pattern Recognition — repetições emocionais",
+          "Memory Gap Mapping",
+          "Plasticity Reinforcement Protocol",
+          "Theta-State Induction Support (auditivo opcional)"
+        ]
+      },
+      {
+        "id": "L3",
+        "name": "Output Layer",
+        "label": "Relatórios e KPIs",
+        "components": [
+          "Índice de Consolidação (IC) — escala 0–100",
+          "Índice de Coerência Narrativa (ICN)",
+          "Índice de Estabilidade Emocional (IEE)",
+          "Mapa Temporal Reconstruído",
+          "Relatório Neuroadaptativo"
+        ]
+      },
+      {
+        "id": "L4",
+        "name": "State Modulation",
+        "label": "Suporte de Estado",
+        "components": [
+          "Áudios Theta — consolidação",
+          "Áudios Alpha — relaxamento e atenção",
+          "Estimulação bilateral (EMDR-adjacent)",
+          "Sons de coerência cardíaca"
+        ]
+      }
+    ],
+    "submodules": [
+      {
+        "id": "SM1",
+        "name": "Neuroplastic Reinforcement",
+        "function": "Treino de plasticidade adaptativa"
+      },
+      {
+        "id": "SM2",
+        "name": "Episodic Recall Trainer",
+        "function": "Exercícios de evocação episódica guiada"
+      },
+      {
+        "id": "SM3",
+        "name": "Implicit Memory Mapping",
+        "function": "Mapeamento de padrões implícitos e emocionais"
+      },
+      {
+        "id": "SM4",
+        "name": "Theta-State Induction",
+        "function": "Suporte auditivo para estados de consolidação"
+      }
+    ]
+  },
+
+  "app_modules": [
+    {
+      "id": "M1",
+      "icon": "🧠",
+      "name": "NeuroMap",
+      "description": "Avaliação cognitiva e rastreamento de padrões",
+      "features": [
+        "Avaliação cognitiva básica",
+        "Testes de memória episódica",
+        "Rastreamento de padrões ao longo do tempo"
+      ]
+    },
+    {
+      "id": "M2",
+      "icon": "🌊",
+      "name": "Flow Tracker",
+      "description": "Monitoramento de estado fisiológico e emocional",
+      "features": [
+        "Monitoramento de estado emocional",
+        "Ritmo respiratório",
+        "Coerência cardíaca (com integração wearable)"
+      ]
+    },
+    {
+      "id": "M3",
+      "icon": "🗂️",
+      "name": "Reconstruction Engine",
+      "description": "Exercícios de reorganização e integração",
+      "features": [
+        "Exercícios de evocação guiada",
+        "Técnica de associação contextual",
+        "Reforço neuroplástico progressivo"
+      ]
+    },
+    {
+      "id": "M4",
+      "icon": "🎧",
+      "name": "Frequency Support",
+      "description": "Suporte de estado auditivo",
+      "features": [
+        "Áudios Theta (4–8 Hz)",
+        "Áudios Alpha (8–12 Hz)",
+        "Sons de estimulação bilateral"
+      ]
+    }
+  ],
+
+  "experiential_keys": {
+    "scientific_version": "Eu autorizo meu sistema nervoso a reorganizar suas rotas com segurança e clareza.",
+    "symbolic_version": "Eu autorizo a reconstrução dos meus caminhos através do silêncio das minhas células.",
+    "note": "As duas versões podem coexistir, mantendo-se separadas por camada."
+  },
+
+  "protocol_rules": {
+    "the_system_never": [
+      "Julga",
+      "Decide",
+      "Direciona"
+    ],
+    "the_system_only": [
+      "Reconstrói",
+      "Consolida",
+      "Preserva"
+    ],
+    "closed_system": true,
+    "evaluates_decisions": false,
+    "directs_choices": false
+  },
+
+  "target_population": {
+    "primary": [
+      "Terapeutas integrativos",
+      "Psicólogos (uso complementar)",
+      "Usuários pós-estresse leve",
+      "Adultos com queixas subjetivas de memória"
+    ],
+    "applications": [
+      "Reabilitação cognitiva leve",
+      "Pós-estresse",
+      "Pós-trauma leve",
+      "Recuperação adaptativa",
+      "Treino cognitivo preventivo"
+    ],
+    "age_range": "18–65",
+    "exclusion_criteria": [
+      "Diagnóstico neurológico ativo grave (ex: demência confirmada)",
+      "Episódio psiquiátrico agudo",
+      "Uso recente de substâncias que comprometam cognição",
+      "Participação simultânea em outro programa intensivo de treino cognitivo"
+    ]
+  },
+
+  "kpis": [
+    {
+      "id": "IC",
+      "name": "Índice de Consolidação",
+      "scale": "0–100",
+      "description": "Grau de estabilidade e fixação das memórias trabalhadas"
+    },
+    {
+      "id": "ICN",
+      "name": "Índice de Coerência Narrativa",
+      "scale": "0–100",
+      "description": "Consistência temporal, causal e temática da narrativa autobiográfica"
+    },
+    {
+      "id": "IEE",
+      "name": "Índice de Estabilidade Emocional",
+      "scale": "0–100",
+      "description": "Nível de regulação afetiva associada às memórias processadas"
+    },
+    {
+      "id": "TRP",
+      "name": "Taxa de Repetição de Padrão",
+      "scale": "frequência absoluta",
+      "description": "Frequência de padrões emocionais recorrentes identificados"
+    }
+  ],
+
+  "validation_protocol": {
+    "study_type": "RCT — Randomized Controlled Trial",
+    "design": "Paralelo, 2 braços, controle ativo",
+    "duration_weeks": 8,
+    "pilot_duration_weeks": 4,
+    "arms": [
+      {
+        "id": "A",
+        "name": "Memory Systems™",
+        "description": "Intervenção completa com todos os módulos"
+      },
+      {
+        "id": "B",
+        "name": "Controle Ativo",
+        "description": "App neutro + journaling genérico + lembretes sem técnicas de evocação"
+      }
+    ],
+    "sample_size": {
+      "pilot_n": "30–40",
+      "rct_n": "60–120 (alvo robusto: 100 total)"
+    },
+    "dosage": "20 min/dia — 5 dias/semana — 8 semanas",
+    "minimum_adherence": "70% das sessões (mínimo 28 de 40 sessões)",
+    "hypotheses": [
+      {
+        "id": "H1",
+        "type": "Primária",
+        "statement": "Usuários do Memory Systems™ terão melhora significativa em desempenho de memória verbal vs. controle após 4–8 semanas"
+      },
+      {
+        "id": "H2",
+        "type": "Secundária",
+        "statement": "Redução de queixas subjetivas de memória (PRMQ/CFQ)"
+      },
+      {
+        "id": "H3",
+        "type": "Secundária",
+        "statement": "Melhora em coerência narrativa/organização autobiográfica"
+      },
+      {
+        "id": "H4",
+        "type": "Exploratória",
+        "statement": "Melhora na qualidade do sono (PSQI)"
+      }
+    ],
+    "validated_metrics": {
+      "objective_cognitive": [
+        "RAVLT — Rey Auditory Verbal Learning Test (memória verbal)",
+        "Digit Span WAIS (memória de trabalho)",
+        "N-Back (memória de trabalho)",
+        "Rey-Osterrieth Complex Figure — recordação (memória visual)"
+      ],
+      "subjective_questionnaires": [
+        "PRMQ — Prospective and Retrospective Memory Questionnaire",
+        "CFQ — Cognitive Failures Questionnaire"
+      ],
+      "sleep": [
+        "PSQI — Pittsburgh Sleep Quality Index"
+      ],
+      "narrative_coherence": [
+        "Protocolo de Narrativa Autobiográfica com scoring cego",
+        "Dimensões: coerência temporal, causal e temática"
+      ]
+    },
+    "statistical_analysis": {
+      "primary": "ANCOVA — pós como DV, grupo como fator, baseline como covariável",
+      "approach": "Intention-to-treat (ITT)",
+      "sensitivity": "Per-protocol (aderentes ≥70%)",
+      "correction": "Benjamini-Hochberg para múltiplos testes secundários",
+      "success_criteria": "p < 0.05 e Cohen's d ≥ 0.3–0.5"
+    },
+    "randomization": "1:1, estratificada por idade (18–39 / 40–65)",
+    "blinding": [
+      "Avaliador dos testes cognitivos — cego",
+      "Analista de dados — cego (dataset sem rótulo dos grupos)"
+    ],
+    "timeline": [
+      { "phase": "Semana -1", "activity": "Screening — consentimento + critérios + baseline questionários" },
+      { "phase": "Semana 0", "activity": "Baseline — testes cognitivos + narrativa autobiográfica" },
+      { "phase": "Semanas 1–8", "activity": "Intervenção/controle + check-in semanal (2 min)" },
+      { "phase": "Semana 8", "activity": "Pós — repetir testes cognitivos + questionários" },
+      { "phase": "Semana 12", "activity": "Follow-up opcional — questionários + 1 teste breve" }
+    ],
+    "publishable_outcome": "Digital neurocognitive training and autobiographical coherence: a randomized controlled trial"
+  },
+
+  "regulatory_framework": {
+    "product_category": "Produto educacional e de treino cognitivo",
+    "compliance": ["LGPD", "GDPR"],
+    "data_management": {
+      "pseudonymization": true,
+      "retention_months": 24,
+      "participant_data_export": true
+    },
+    "does_not": [
+      "Diagnosticar",
+      "Prescrever",
+      "Substituir tratamento médico"
+    ],
+    "positioning_language": "Plataforma de reorganização neuroinformacional com abordagem integrativa"
+  },
+
+  "ecosystem_integration": {
+    "connected_systems": [
+      {
+        "system": "PsycheSystems™",
+        "connection": "Memória emocional e processamento psíquico"
+      },
+      {
+        "system": "BioSystems™",
+        "connection": "Suporte metabólico cerebral e homeostase"
+      },
+      {
+        "system": "FrequencySystems™",
+        "connection": "Estimulação auditiva e suporte de estado neural"
+      },
+      {
+        "system": "GeoSystems™",
+        "connection": "Memória ambiental e contexto territorial"
+      },
+      {
+        "system": "NutriSystems™",
+        "connection": "Nutrição cerebral e suporte cognitivo"
+      }
+    ],
+    "suggested_new_module": {
+      "name": "ChronoSystems™",
+      "rationale": "Tempo biológico como dimensão da consolidação de memória"
+    }
+  },
+
+  "metadata": {
+    "created_by": "Cyntreon Holding OÜ",
+    "ecosystem": "Inteligência Integrativa™",
+    "language": "pt-BR",
+    "schema_version": "1.0.0",
+    "tags": [
+      "memória",
+      "neuroplasticidade",
+      "cognição",
+      "treino cognitivo",
+      "terapia integrativa",
+      "consolidação",
+      "reabilitação cognitiva",
+      "Cyntreon"
+    ]
+  }
+}
