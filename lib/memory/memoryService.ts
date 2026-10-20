@@ -90,7 +90,7 @@ export function evaluateCognitiveSession(
 
   const herbySynergy = compositeScore < 60
     ? 'Bacopa monnieri (500mg extrato padronizado 20% bacosídeos) + Ginkgo biloba (120mg) para oxigenação microvascular cerebral.'
-    : 'Hericium erinaceus (Juba de Leão / Lion's Mane 1000mg) para estímulo de Fator de Crescimento Nervoso (NGF) e neurogênese hipocampal.';
+    : "Hericium erinaceus (Juba de Leão / Lion's Mane 1000mg) para estímulo de Fator de Crescimento Nervoso (NGF) e neurogênese hipocampal.";
 
   const acousticProtocol = compositeScore < 70
     ? 'Gama 40 Hz isocrônico diurno por 15 minutos (arrasto cortical pré-estudo) + Solfeggio 528 Hz noturno.'
